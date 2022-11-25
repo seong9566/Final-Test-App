@@ -17,7 +17,7 @@ class CustomTextFormField extends StatelessWidget {
         SizedBox(height: small_gap),
         TextFormField(
           //1. 값이 없으면 plase enter some text 경고 화면 표시
-          validator: (value) => value!.isEmpty ? "Please enter some text" : null,
+          validator: (value) => value!.isEmpty ? "${text}을 입력해주세요." : null, // 입력된 값은 value에 저장된다.
           // 2. 해당 textformfield가 비밀번호 입력 양식이라면 ***표시 처리 해줌.
           obscureText: text == "Password" ? true : false,
           decoration: InputDecoration(
